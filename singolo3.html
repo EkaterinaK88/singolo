@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="singolo3.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <section class="feedback">
+        <h2 class="feedback__title">Get a Quote</h2>
+        <p class="feedback__text">
+          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
+          Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget
+          lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
+          tortor mauris condimentum nibh.
+        </p>
+        <div class="columns">
+          <form
+            autocomplete="off"
+            class="feedback__form"
+            action="https://echo.htmlacademy.ru"
+            method="get"
+          >
+            <p class="feedback__field">
+              <input
+                id="user-name"
+                type="text"
+                name="user-name"
+                value=""
+                placeholder="Name(Required)"
+                required
+              />
+            </p>
+            <p class="feedback__field">
+              <input
+                id="user-email"
+                type="email"
+                name="email"
+                value=""
+                placeholder="Email(Required)"
+                required
+              />
+            </p>
+            <p class="feedback__field">
+              <input
+                id="user-subject"
+                type="text"
+                name="subject"
+                value=""
+                placeholder="Subject"
+              />
+            </p>
+            <p class="feedback__field">
+              <textarea
+                id="user-feedback"
+                placeholder="Describe your project in detail..."
+              ></textarea>
+            </p>
+            <button class="feedback__button" type="submit">Submit</button>
+          </form>
+
+          <div class="contacts">
+            <h3 class="contacts__title">Contact Information</h3>
+            <p class="contacts__text">
+              Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.
+              Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla
+              sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et
+              consequat felis.
+            </p>
+            <ul class="contacts__list">
+              <li class="contacts__item contacts__item--location">
+                Elm St. 14/05 Lost City
+              </li>
+              <li class="contacts__item contacts__item--phone">
+                <a class="contacts__item--link" href="tel: 035283318635"
+                  >03528 331 86 35</a
+                >
+              </li>
+              <li class="contacts__item contacts__item--email">
+                <a class="contacts__item--link" href="mailto: info@singolo.com"
+                  >info@singolo.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>&#169; Copyright 2013</span>
+        <ul class="footer__social">
+          <li class="footer__item">
+            <a class="footer__link footer__link--fb"
+              ><span class="visually-hidden">Facebook</span></a
+            >
+          </li>
+          <li class="footer__item">
+            <a class="footer__link footer__link--google"
+              ><span class="visually-hidden">Google+</span></a
+            >
+          </li>
+          <li class="footer__item">
+            <a class="footer__link footer__link--twitter"
+              ><span class="visually-hidden">Twitter</span></a
+            >
+          </li>
+          <li class="footer__item">
+            <a class="footer__link footer__link--linkedin"
+              ><span class="visually-hidden">LinkedIn</span></a
+            >
+          </li>
+        </ul>
+      </footer>
+    </main>
+  </body>
+</html>
