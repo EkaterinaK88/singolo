@@ -133,12 +133,6 @@ input [type="radio"].visually-hidden {
   outline: none;
 }
 
-.feedback__form input[type="text"]:required:invalid,
-.feedback__form input[type="email"]:invalid {
-  border: 2px solid #e2161a;
-  color: #e2161a;
-}
-
 .feedback__button {
   padding: 9px 23px;
   border: 2px solid #f0d8d9;
