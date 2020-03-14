@@ -1,17 +1,5 @@
 let menuItems = document.querySelectorAll(".main-nav__item");
 
-// for (let i = 0; i < menuItems.length; i++) {
-//   for (let j = 0; j < menuItems.length; j++) {
-//       menuItems[j].addEventListener('click', e => {
-//         menuItems[j].classList.add("active"); 
-//         if ( i !== j && menuItems[i].classList.contains("active")) {
-//           menuItems[i].classList.remove("active");
-//         }
-//       }) 
-//   }
-
-// }
-
 menuItems.forEach((item) => {
   item.addEventListener('click', e => {
     menuItems.forEach(el => el.classList.remove("active"));
