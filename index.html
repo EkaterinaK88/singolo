@@ -7,7 +7,6 @@
   </head>
 
   <body>
-    <a id="home"></a>
     <header class="main-header container">
       <nav class="main-nav">
         <a class="main-nav__logo">Singolo<span class="active">*</span></a>
@@ -22,6 +21,7 @@
     </header>
 
     <main class="container">
+      <a id="home" class="anchor"></a>
       <h1 class="visually-hidden">Singolo</h1>
       <section class="slider">
         <h2 class="visually-hidden">Slider</h2>
@@ -33,6 +33,7 @@
               width="240"
               height="483"
             />
+            <div class="slider__display slider-hide"></div>
           </li>
           <li class="slider__item">
             <img
@@ -41,8 +42,12 @@
               width="484"
               height="240"
             />
+            <div
+              class="slider__display slider__display--horizontal slider-hide"
+            ></div>
           </li>
         </ul>
+        <div class="slider__list-2 slider-hide"></div>
         <button class="slider__prev" type="button">
           <span class="visually-hidden">Previous slide</span>
         </button>
@@ -50,8 +55,8 @@
           <span class="visually-hidden">Next slide</span>
         </button>
       </section>
-      <a id="services"></a>
       <section class="services">
+        <a id="services" class="anchor"></a>
         <h2 class="services__title">Our Services</h2>
         <p class="services__text">
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -104,8 +109,8 @@
           </li>
         </ul>
       </section>
-      <a id="portfolio"></a>
       <section class="portfolio">
+        <a id="portfolio" class="anchor"></a>
         <h2 class="portfolio__title">Portfolio</h2>
         <p class="portfolio__text">
           Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
@@ -173,8 +178,8 @@
           </ul>
         </div>
       </section>
-      <a id="about"></a>
       <section class="about-us">
+        <a id="about" class="anchor"></a>
         <h2 class="about-us__title">About Us</h2>
         <p class="about-us__text">
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -290,8 +295,8 @@
           </li>
         </ul>
       </section>
-      <a id="contact"></a>
       <section class="feedback">
+        <a id="contact" class="anchor"></a>
         <h2 class="feedback__title">Get a Quote</h2>
         <p class="feedback__text">
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -338,6 +343,7 @@
             <p class="feedback__field">
               <textarea
                 id="user-feedback"
+                name="feedback"
                 placeholder="Describe your project in detail..."
               ></textarea>
             </p>
@@ -396,5 +402,6 @@
         </li>
       </ul>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
