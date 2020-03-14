@@ -62,6 +62,16 @@ input [type="radio"].visually-hidden {
   min-height: 95px;
   padding-top: 29px;
   box-sizing: border-box;
+  position: fixed;
+  z-index: 5;
+  left: 50%;
+  top: 0;
+  margin-left: -510px;
+}
+
+.anchor {
+  position: absolute;
+  top: -95px;
 }
 
 .main-nav {
@@ -102,9 +112,14 @@ input [type="radio"].visually-hidden {
   padding-bottom: 3px;
 }
 
+.main-nav__item:active {
+  color: #f06c64;
+  border: none;
+}
+
 .main-nav__item.active:hover {
   color: #f06c64;
-  border-bottom: 1px solid #f06c64;
+  border-bottom: none;
 }
 
 .active {
@@ -135,6 +150,7 @@ input [type="radio"].visually-hidden {
   padding-top: 53px;
   padding-bottom: 54px;
   position: relative;
+  margin-top: 95px;
 }
 
 .slider__list {
@@ -148,8 +164,57 @@ input [type="radio"].visually-hidden {
   padding-right: 34px;
 }
 
+.slider__list-2 {
+  background-color: #648bf0;
+  background-image: url("assets/img/slider2/phone-vertical-display.png"),
+    url("assets/img/slider2/phone-vertical.svg"),
+    url("assets/img/slider2/phone-vertical-shadow.png"),
+    url("assets/img/slider2/phone-vertical-display-1.png"),
+    url("assets/img/slider2/phone-vertical-display-2.png"),
+    url("assets/img/slider2/phone-vertical-1.svg"),
+    url("assets/img/slider2/phone-vertical-2.svg"),
+    url("assets/img/slider2/phone-vertical-shadow-1.png"),
+    url("assets/img/slider2/phone-vertical-shadow-2.png");
+  background-repeat: no-repeat;
+  background-position: 409px 126px, center center, 394px 56px, 273px 207px,
+    634px 207px, 265px 165px, 625px 165px, 265px 165px, 625px 165px;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  min-height: 600px;
+  width: 1020px;
+}
+
+.slider-hide {
+  display: none;
+}
+
+.slider__item {
+  cursor: pointer;
+  position: relative;
+}
+
 .slider__item:last-child {
   margin-top: -1px;
+}
+
+.slider__display {
+  position: absolute;
+  z-index: 2;
+  width: 188px;
+  height: 333px;
+  background-color: #000;
+  left: 14px;
+  top: 65px;
+}
+
+.slider__display--horizontal {
+  left: 132px;
+  top: -59px;
+  width: 189px;
+  height: 333px;
+  transform: rotate(90deg);
 }
 
 .slider__prev,
@@ -164,7 +229,7 @@ input [type="radio"].visually-hidden {
 .slider__next::before {
   position: absolute;
   content: "";
-  z-index: 3;
+  z-index: 10;
   left: 4px;
   top: -252px;
   width: 15px;
@@ -177,9 +242,7 @@ input [type="radio"].visually-hidden {
   cursor: pointer;
 }
 .slider__prev:hover::before,
-.slider__next:hover::before,
-.slider__prev:focus::before,
-.slider__next:focus::before {
+.slider__next:hover::before {
   border-color: #f2f2f2;
 }
 .slider__prev:active::before,
@@ -203,6 +266,7 @@ img {
   padding-right: 40px;
   padding-top: 38px;
   padding-bottom: 28px;
+  position: relative;
 }
 
 .services__title {
@@ -299,6 +363,7 @@ img {
   padding-right: 40px;
   border-bottom: 6px #323746 solid;
   color: #767e9e;
+  position: relative;
 }
 
 .portfolio__title {
@@ -334,10 +399,21 @@ img {
   margin-right: -20px;
 }
 
+.change-order {
+  flex-direction: row-reverse;
+}
+
 .portfolio__item {
   width: 220px;
   margin-top: 20px;
   margin-right: 20px;
+  cursor: pointer;
+}
+
+.portfolio__border img {
+  border: 5px solid #f06c64;
+  width: 210px;
+  height: 177px;
 }
 
 img {
@@ -389,6 +465,7 @@ img {
   padding-right: 40px;
   border-bottom: 6px #fff solid;
   color: #666d89;
+  position: relative;
 }
 
 .about-us__title {
@@ -507,6 +584,7 @@ img {
   padding-right: 40px;
   border-bottom: 6px #ea676b solid;
   color: #f0d8d9;
+  position: relative;
 }
 
 .feedback__title {
@@ -693,6 +771,46 @@ img {
 .columns {
   display: flex;
   justify-content: space-between;
+}
+
+.form-info {
+  width: 500px;
+  min-height: 300px;
+  background-color: #f0d8d9;
+  border-radius: 5px;
+  box-shadow: 0px 0px 50px 30px rgba(116, 54, 54, 0.5);
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  margin-left: -250px;
+  color: #000;
+  padding: 60px 150px;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+.info-text {
+  color: #000;
+  font-size: 16px;
+  margin-left: -70px;
+  margin-right: -70px;
+  margin-top: 7px;
+  text-align: justify;
+}
+
+.popup-button {
+  margin: auto;
+  display: block;
+  margin-top: 40px;
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+  border: 2px solid #d6564f;
+  border-radius: 3px;
+}
+
+.popup-button:hover {
+  border: 2px solid #f48c8f;
 }
 
 .footer {
