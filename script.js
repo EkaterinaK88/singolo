@@ -36,25 +36,36 @@ phones.forEach((item) => {
 
 let portfolioTabs = document.querySelectorAll(".portfolio__button");
 let projectsList = document.querySelector(".portfolio__projects");
-let project = document.querySelectorAll(".portfolio__item");
+let projects = document.querySelectorAll(".portfolio__item");
 
 
-portfolioTabs.forEach((item, i) => {
+portfolioTabs.forEach((item) => {
   item.addEventListener('click', e => {
     portfolioTabs.forEach(el => el.classList.remove("portfolio__button--active"));
     item.classList.add("portfolio__button--active");
-    projectsList.removeChild(project[i - 1]);
-    projectsList.appendChild(project[i - 1]);
+    let firstProject = projectsList.querySelector(".portfolio__item");
+    projectsList.removeChild(firstProject);
+    projectsList.appendChild(firstProject);
+    let borderedProject = document.querySelector(".portfolio__border");
+    if (borderedProject) {
+      borderedProject.classList.remove("portfolio__border")
+    };
   }) 
 })
 
-project.forEach((item) => {
+projects.forEach((item) => {
   item.addEventListener('click', e => {
-    project.forEach(el => el.classList.remove("portfolio__border"));
-    item.classList.add("portfolio__border");
+    let borderedProject = document.querySelector(".portfolio__border");
+    if (borderedProject) {
+      borderedProject.classList.remove("portfolio__border")
+    };
+    if (borderedProject == item) {
+      item.classList.remove("portfolio__border");
+    } else {
+      item.classList.add("portfolio__border");
+    }
   }) 
 })
-
 
 
 let section = document.querySelector(".feedback");
