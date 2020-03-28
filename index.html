@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SINGOLO</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -9,8 +10,16 @@
   <body>
     <header class="main-header container">
       <nav class="main-nav">
+        <button class="main-nav__button" type="button">
+          <span class="visually-hidden">Menu</span>
+        </button>
         <a class="main-nav__logo">Singolo<span class="active">*</span></a>
         <ul class="main-nav__list">
+          <li>
+            <a class="main-nav__logo mobile-menu"
+              >Singolo<span class="active">*</span></a
+            >
+          </li>
           <li><a class=" main-nav__item active" href="#home">Home</a></li>
           <li><a class="main-nav__item" href="#services">Services</a></li>
           <li><a class="main-nav__item" href="#portfolio">Portfolio</a></li>
@@ -402,6 +411,8 @@
         </li>
       </ul>
     </footer>
+    <div class="overlay"></div>
     <script src="script.js"></script>
+    <script src="mobile-menu.js"></script>
   </body>
 </html>
